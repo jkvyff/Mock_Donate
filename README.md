@@ -12,12 +12,8 @@ Return a responsive website page based on this original image.
 
 The Original:
 
-<img src="public/Original.png" alt="Original donate page design" width="600">
+<img src="public/Original.png" alt="Original donate page design" width="1000">
 
 The Final:
 
-<img src="public/Final.png" alt="Final donate page design" width="600">
-
-### Live at
-
-https://www.vyff.com/mockDonate
+<img src="public/Final.png" alt="Final donate page design" width="1000">
