@@ -11,14 +11,14 @@ const DonateForm = () => {
   return (
     <>
       <form className="flex flex-col justify-center md:justify-start mx-auto my-auto pt-8 md:pt-0 px-8 md:px-24 lg:mx-0 lg:px-32 max-w-2xl">
-        <h2 className="text-indigo-600 text mb-10 font-semibold pt-12">
+        <h2 className="text-indigo-600 text mb-6 font-semibold pt-16">
           Donate by Card
         </h2>
 
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3 mb-6 md:mb-0">
+        <div className="flex flex-wrap -mx-3">
+          <div className="w-full px-3 mb-6">
             <label
-              className="block tracking-wide text-gray-700 text-xs font-medium mb-2"
+              className="block tracking-wide text-gray-700 text-xs font-medium mb-1"
               htmlFor="donationAmount"
             >
               Donation Amount
@@ -27,7 +27,7 @@ const DonateForm = () => {
               <div
                 onClick={(ev) => setDonationAmount(15)}
                 className={
-                  "w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded py-2 px-3  mt-1 leading-tight focus:outline-none focus:shadow-outline " +
+                  "w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline " +
                   (donationAmount === 15
                     ? " text-white bg-indigo-600"
                     : " text-gray-700")
@@ -38,7 +38,7 @@ const DonateForm = () => {
               <div
                 onClick={(ev) => setDonationAmount(25)}
                 className={
-                  "w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded mx-2 py-2 px-3 mt-1 leading-tight focus:outline-none focus:shadow-outline" +
+                  "w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded mx-2 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" +
                   (donationAmount === 25
                     ? " text-white bg-indigo-600"
                     : " text-gray-700")
@@ -49,7 +49,7 @@ const DonateForm = () => {
               <div
                 onClick={(ev) => setDonationAmount(50)}
                 className={
-                  "w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded py-2 px-3 mt-1 leading-tight focus:outline-none focus:shadow-outline" +
+                  "w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" +
                   (donationAmount === 50
                     ? " text-white bg-indigo-600"
                     : " text-gray-700")
@@ -60,7 +60,7 @@ const DonateForm = () => {
               <div
                 onClick={(ev) => setDonationAmount(75)}
                 className={
-                  "w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded mx-2 py-2 px-3 mt-1 leading-tight focus:outline-none focus:shadow-outline" +
+                  "w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded mx-2 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" +
                   (donationAmount === 75
                     ? " text-white bg-indigo-600"
                     : " text-gray-700")
@@ -73,7 +73,7 @@ const DonateForm = () => {
                 id="donationAmount"
                 placeholder="Other"
                 onChange={(ev) => setDonationAmount(ev.target.value)}
-                className="w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded py-2 px-3 mt-1 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-1/5 shadow-sm appearance-none text-center cursor-pointer text-xs align-middle border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             <p className="hidden text-red-500 text-xs italic mt-2">
@@ -82,10 +82,10 @@ const DonateForm = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3 mb-6 md:mb-0">
+        <div className="flex flex-wrap -mx-3">
+          <div className="w-full px-3 mb-6">
             <label
-              className="block tracking-wide text-gray-700 text-xs font-medium mb-2"
+              className="block tracking-wide text-gray-700 text-xs font-medium mb-1"
               htmlFor="email"
             >
               Email Address
@@ -94,7 +94,7 @@ const DonateForm = () => {
               type="email"
               id="email"
               placeholder="jane.doe@example.com"
-              className="shadow-sm appearance-none text-xs border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow-sm appearance-none text-xs border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
             <p className="hidden text-red-500 text-xs italic mt-2">
               Please fill out this field.
@@ -103,21 +103,21 @@ const DonateForm = () => {
         </div>
 
         <fieldset className="mb-6">
-          <label className="block tracking-wide text-gray-700 text-xs font-medium mb-2">
+          <label className="block tracking-wide text-gray-700 text-xs font-medium mb-1">
             Card Information
           </label>
-          <div className="rounded-md shadow-sm">
+          <div className="rounded-none rounded-md">
             <div className="flex relative">
               <input
                 type="cardNumber"
                 id="cardNumber"
                 placeholder="1234 1234 1234 1234"
-                className="relative block w-full px-3 py-2 border border-gray-300 rounded-t-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
+                className="relative text-xs h-8 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-none rounded-t-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
               />
               {/* Discover */}
               <span className="absolute inset-y-0 right-0">
                 <svg
-                  className="h-10 w-10"
+                  className="h-8 w-8"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 40 40"
                 >
@@ -136,7 +136,7 @@ const DonateForm = () => {
               {/* Amexerican Express */}
               <span className="absolute inset-y-0 right-1">
                 <svg
-                  className="h-10 w-10"
+                  className="h-8 w-8"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 40 40"
                 >
@@ -164,7 +164,7 @@ const DonateForm = () => {
               {/* Master Card */}
               <span className="absolute inset-y-0 right-2">
                 <svg
-                  className="h-10 w-10"
+                  className="h-8 w-8"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 40 40"
                 >
@@ -188,7 +188,7 @@ const DonateForm = () => {
               {/* Visa */}
               <span className="absolute inset-y-0 right-3">
                 <svg
-                  className="h-10 w-10"
+                  className="h-8 w-8"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 40 40"
                 >
@@ -231,7 +231,7 @@ const DonateForm = () => {
                   type="cardExpiration"
                   id="cardExpiration"
                   placeholder="MM/DD"
-                  className="relative block w-full px-3 py-2 border border-gray-300 rounded-bl-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
+                  className="relative shadow-sm h-8 appearance-none text-xs block w-full px-3 py-2 border border-gray-300 rounded-none rounded-bl-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
                 />
               </div>
               <div className="w-1/2 flex-1 min-w-0">
@@ -239,7 +239,7 @@ const DonateForm = () => {
                   type="cvv"
                   id="cvv"
                   placeholder="CVV"
-                  className="relative block w-full px-3 py-2 border border-l-0 border-gray-300 rounded-br-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
+                  className="relative shadow-sm h-8 appearance-none text-xs block w-full px-3 py-2 border border-l-0 border-gray-300 rounded-none rounded-br-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
                 />
               </div>
             </div>
@@ -249,10 +249,10 @@ const DonateForm = () => {
           </p>
         </fieldset>
 
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3 mb-6 md:mb-0">
+        <div className="flex flex-wrap -mx-3">
+          <div className="w-full px-3 mb-6">
             <label
-              className="block tracking-wide text-gray-700 text-xs font-medium mb-2"
+              className="block tracking-wide text-gray-700 text-xs font-medium mb-1"
               htmlFor="name"
             >
               Name on Card
@@ -261,7 +261,7 @@ const DonateForm = () => {
               type="name"
               id="name"
               placeholder="Jane Doe"
-              className="shadow-sm text-xs appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow-sm text-xs appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
             <p className="hidden text-red-500 text-xs italic mt-2">
               Please fill out this field.
@@ -270,7 +270,7 @@ const DonateForm = () => {
         </div>
 
         <fieldset className="mb-6">
-          <label className="block tracking-wide text-gray-700 text-xs font-medium mb-2">
+          <label className="block tracking-wide text-gray-700 text-xs font-medium mb-1">
             Billing Address
           </label>
           <div className="rounded-md shadow-sm">
@@ -279,7 +279,7 @@ const DonateForm = () => {
                 type="addressLine1"
                 id="addressLine1"
                 placeholder="Address line 1"
-                className="relative block w-full px-3 py-2 border border-gray-300 rounded-t-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
+                className="relative shadow-sm h-8 appearance-none text-xs block w-full px-3 py-2 border border-gray-300 rounded-none rounded-t-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
               />
             </div>
             <div>
@@ -287,7 +287,7 @@ const DonateForm = () => {
                 type="addressLine2"
                 id="addressLine2"
                 placeholder="Address line 2"
-                className="relative block w-full px-3 py-2 border border-t-0 border-gray-300 focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
+                className="relative shadow-sm h-8 appearance-none text-xs block w-full px-3 py-2 border border-t-0 border-gray-300 rounded-none focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
               />
             </div>
             <div className="-mt-px flex">
@@ -296,7 +296,7 @@ const DonateForm = () => {
                   type="city"
                   id="city"
                   placeholder="City"
-                  className="relative block w-full px-3 py-2 border border-gray-300 focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
+                  className="relative shadow-sm h-8 appearance-none text-xs block w-full px-3 py-2 border border-gray-300 rounded-none focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
                 />
               </div>
               <div className="w-1/2 flex-1 min-w-0">
@@ -304,7 +304,7 @@ const DonateForm = () => {
                   type="zip"
                   id="zip"
                   placeholder="ZIP"
-                  className="relative block w-full px-3 py-2 border border-l-0 border-gray-300 focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
+                  className="relative shadow-sm h-8 appearance-none text-xs block w-full px-3 py-2 border border-l-0 border-gray-300 rounded-none focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5"
                 />
               </div>
             </div>
@@ -315,7 +315,7 @@ const DonateForm = () => {
                   id="state"
                   defaultValue="State"
                   className={
-                    "form-select w-full px-2 py-2 border border-gray-300 rounded-bl-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5" +
+                    "form-select h-8 text-xs w-full px-2 py-2 border border-gray-300 rounded-none rounded-bl-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs" +
                     (state.length === 0 ? " text-gray-500 " : "")
                   }
                   onChange={(ev) => setState(ev.target.value)}
@@ -335,7 +335,7 @@ const DonateForm = () => {
                   id="country"
                   defaultValue="Country"
                   className={
-                    "form-select w-full px-2 py-2 border border-l-0 border-gray-300 rounded-br-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs sm:leading-5" +
+                    "form-select h-8 w-full px-2 py-2 border border-l-0 border-gray-300 rounded-none rounded-br-md focus:outline-none focus:shadow-outline focus:border-blue-300 focus:z-10 sm:text-xs" +
                     (country.length === 0 ? " text-gray-500 " : "")
                   }
                   onChange={(ev) => setCountry(ev.target.value)}
@@ -416,7 +416,7 @@ const DonateForm = () => {
           </div>
         </div>
 
-        <button className="bg-indigo-600 mb-6 hover:bg-indigo-700 text-white py-2 px-4 rounded">
+        <button className="bg-indigo-600 h-12 mb-6 hover:bg-indigo-700 text-white py-2 px-4 rounded">
           <span className="font-bold">Donate </span>(${donationAmount})
         </button>
       </form>

@@ -8,8 +8,8 @@ const CallToAct = () => {
   return (
     <>
       <div className="flex justify-center lg:justify-end my-auto">
-        <div className="flex flex-col pt-8 md:pt-0 px-8 md:px-24 lg:px-32 lg:py-24 max-w-2xl">
-          <div className="text-xs font-semibold text-white pb-8 pt-6">
+        <div className="flex flex-col pt-4 md:pt-0 px-8 md:px-24 lg:px-32 lg:py-24 max-w-2xl">
+          <div className="text-xs font-semibold text-white pb-8 pt-18 lg:pt-0">
             <img
               src={logo}
               alt="donut"
@@ -22,7 +22,7 @@ const CallToAct = () => {
           <div className="text-md text-white pb-4">
             Donec cursus lorem id lorem faucibus rhoncus.
           </div>
-          <div className="text-xs sm:text-2xs text-white leading-5 pb-8 max-w-md">
+          <div className="text-xs sm:text-2xs text-white leading-5 pb-6 max-w-md">
             Donec cursus lorem id lorem faucibus rhoncus. Vivamus tincidunt,
             libero laoreet volutpat aliquam, lectus mi.
           </div>
@@ -33,12 +33,12 @@ const CallToAct = () => {
               alt="face of building with square windows"
             />
             <img
-              className="rounded-md col-span-1 row-span-1 object-cover h-full w-full"
+              className="rounded-md col-span-1 row-span-1 object-cover w-full"
               src={image2}
               alt="looking up at square windows of large skylight"
             />
             <img
-              className="rounded-md col-span-2 row-span-1 object-cover h-full w-full"
+              className="rounded-md col-span-2 row-span-1 object-cover w-full"
               src={image3}
               alt="wide view of snowy mountains with 2 hikers in foreground"
             />

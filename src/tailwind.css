@@ -13,12 +13,13 @@
   color-adjust: exact;
   background-repeat: no-repeat;
   background-color: #fff;
-  padding-top: 0.5rem;
+  padding-top: 0.4rem;
   padding-right: 2.5rem;
   padding-bottom: 0.5rem;
   padding-left: 0.75rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 1.5;
+  vertical-align: middle;
   background-position: right 0.5rem center;
   background-size: 1.5em 1.5em;
 }
